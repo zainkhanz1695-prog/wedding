@@ -6,85 +6,142 @@
 <title>Tehreem & Ahsan | Wedding Invitation</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
 
 body{
-  font-family:Georgia,serif;
-  background:#f8f2e8;
-  color:#4b3027;
-  text-align:center;
+font-family:Georgia,"Times New Roman",serif;
+background:#f8f2e8;
+color:#4b3027;
+text-align:center;
+}
+
+section{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:40px 20px;
 }
 
 .hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:30px;
-  background:linear-gradient(135deg,#fffaf2,#ead7b1);
+background:linear-gradient(135deg,#fffaf2,#ead7b1);
 }
 
 .card{
-  max-width:650px;
-  width:100%;
-  background:#fffdf8;
-  padding:60px 30px;
-  border:8px solid #d5b46a;
-  box-shadow:0 15px 40px rgba(0,0,0,.15);
+max-width:700px;
+width:100%;
+background:#fffdf8;
+border:8px solid #d5b46a;
+box-shadow:0 15px 45px rgba(0,0,0,.18);
+padding:60px 30px;
+position:relative;
+}
+
+.decor{
+font-size:32px;
+color:#b58a3b;
+letter-spacing:12px;
+margin-bottom:25px;
+}
+
+.bismillah{
+font-size:24px;
+color:#7c2635;
+margin-bottom:25px;
 }
 
 .small{
-  font-size:18px;
-  letter-spacing:3px;
-  color:#9b7040;
-  margin-bottom:25px;
+font-size:16px;
+letter-spacing:3px;
+color:#9b7040;
+margin-bottom:20px;
 }
 
 h1{
-  font-size:58px;
-  color:#7c2635;
-  margin:15px 0;
+font-size:62px;
+font-weight:normal;
+color:#7c2635;
+line-height:1.1;
 }
 
-.amp{
-  font-size:28px;
-  color:#b58a3b;
-  margin:10px;
+.and{
+font-size:30px;
+color:#b58a3b;
+margin:15px;
 }
 
 .subtitle{
-  font-size:20px;
-  margin:25px 0;
-  line-height:1.7;
+font-size:19px;
+line-height:1.8;
+margin:30px 0;
 }
 
 .details{
-  margin-top:30px;
-  padding:25px;
-  border-top:1px solid #d5b46a;
-  border-bottom:1px solid #d5b46a;
-  line-height:2;
-  font-size:18px;
+border-top:1px solid #d5b46a;
+border-bottom:1px solid #d5b46a;
+padding:25px;
+font-size:18px;
+line-height:2;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:13px 28px;
+background:#7c2635;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+
+.info{
+background:#f5eadb;
+}
+
+.info-box{
+max-width:650px;
+background:white;
+padding:50px 30px;
+box-shadow:0 10px 35px rgba(0,0,0,.12);
+}
+
+.info-box h2{
+font-size:38px;
+color:#7c2635;
+font-weight:normal;
+margin-bottom:30px;
+}
+
+.event{
+padding:20px;
+margin:15px 0;
+border:1px solid #d5b46a;
+}
+
+.event h3{
+color:#7c2635;
+font-size:24px;
+margin-bottom:10px;
 }
 
 .footer{
-  margin-top:30px;
-  font-size:17px;
-  color:#7c2635;
+background:#7c2635;
+color:white;
+min-height:55vh;
+}
+
+.footer h2{
+font-size:40px;
+font-weight:normal;
+margin-bottom:20px;
 }
 
 @media(max-width:600px){
-  h1{
-    font-size:42px;
-  }
-
-  .card{
-    padding:45px 20px;
-  }
+h1{font-size:45px}
+.card{padding:45px 20px}
+.bismillah{font-size:20px}
 }
 </style>
 </head>
@@ -92,11 +149,16 @@ h1{
 <body>
 
 <section class="hero">
-
 <div class="card">
 
-<div class="small">
+<div class="decor">✦ ✧ ✦</div>
+
+<div class="bismillah">
 بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+</div>
+
+<div class="small">
+WEDDING INVITATION
 </div>
 
 <p class="subtitle">
@@ -105,41 +167,62 @@ With the blessings of our families
 
 <h1>Tehreem</h1>
 
-<div class="amp">&</div>
+<div class="and">&</div>
 
 <h1>Ahsan</h1>
 
 <p class="subtitle">
 Together with their families,<br>
-invite you to celebrate their special day.
+we invite you to celebrate<br>
+their beautiful beginning.
 </p>
 
 <div class="details">
-
-<strong>WEDDING INVITATION</strong>
-
-<br>
-
-📅 <strong>6 January</strong>
-
-<br>
-
-🕔 <strong>5:00 PM</strong>
-
-<br>
-
+📅 <strong>6 January</strong><br>
+🕔 <strong>5:00 PM</strong><br>
 📍 <strong>Areesh Marriage Hall</strong>
-
 </div>
 
-<div class="footer">
-Your presence will make our celebration even more special.
-<br><br>
-With love, Tehreem & Ahsan
-</div>
+<a href="#details" class="button">
+View Wedding Details
+</a>
 
 </div>
+</section>
 
+
+<section class="info" id="details">
+<div class="info-box">
+
+<h2>Our Wedding Day</h2>
+
+<div class="event">
+<h3>Wedding Celebration</h3>
+<p>6 January</p>
+<p>5:00 PM</p>
+<p>Areesh Marriage Hall</p>
+</div>
+
+<p class="subtitle">
+Your presence and blessings will make<br>
+our special day even more memorable.
+</p>
+
+</div>
+</section>
+
+
+<section class="footer">
+<div>
+<h2>Tehreem & Ahsan</h2>
+
+<p class="subtitle">
+We can't wait to celebrate<br>
+this beautiful day with you.
+</p>
+
+<p>With love ❤️</p>
+</div>
 </section>
 
 </body>
