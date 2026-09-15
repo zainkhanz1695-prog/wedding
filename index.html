@@ -3,228 +3,380 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+
 <title>Tehreem & Ahsan | Wedding Invitation</title>
-  <meta name="robots" content="noindex, nofollow, noarchive">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-font-family:Georgia,"Times New Roman",serif;
-background:#f8f2e8;
-color:#4b3027;
-text-align:center;
+  font-family:Georgia,"Times New Roman",serif;
+  background:#f8f1e7;
+  color:#4b3027;
+  text-align:center;
 }
 
-section{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px 20px;
+/* OPENING SCREEN */
+#opening{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#fffaf2,#e8d3ad);
+  transition:opacity 1s ease, visibility 1s ease;
 }
 
-.hero{
-background:linear-gradient(135deg,#fffaf2,#ead7b1);
+.open-card{
+  width:90%;
+  max-width:520px;
+  padding:55px 25px;
+  background:#fffdf8;
+  border:6px solid #d5b46a;
+  box-shadow:0 15px 45px rgba(0,0,0,.18);
 }
 
-.card{
-max-width:700px;
-width:100%;
-background:#fffdf8;
-border:8px solid #d5b46a;
-box-shadow:0 15px 45px rgba(0,0,0,.18);
-padding:60px 30px;
-position:relative;
-}
-
-.decor{
-font-size:32px;
-color:#b58a3b;
-letter-spacing:12px;
-margin-bottom:25px;
+.open-card .ornament{
+  font-size:30px;
+  color:#b58a3b;
+  letter-spacing:8px;
+  margin-bottom:25px;
 }
 
 .bismillah{
-font-size:24px;
-color:#7c2635;
-margin-bottom:25px;
+  font-size:23px;
+  color:#7c2635;
+  margin-bottom:25px;
+}
+
+.invite{
+  font-size:14px;
+  letter-spacing:4px;
+  color:#9b7040;
+  margin-bottom:20px;
+}
+
+.open-card h1{
+  font-size:45px;
+  font-weight:normal;
+  color:#7c2635;
+}
+
+.open-card .and{
+  font-size:25px;
+  color:#b58a3b;
+  margin:12px;
+}
+
+.open-text{
+  margin:25px 0;
+  line-height:1.8;
+}
+
+.open-btn{
+  border:none;
+  background:#7c2635;
+  color:white;
+  padding:14px 32px;
+  border-radius:30px;
+  font-family:Georgia,serif;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.open-btn:hover{
+  transform:scale(1.05);
+}
+
+/* MAIN */
+#main{
+  display:none;
+  animation:fadeIn 1.5s ease;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+.hero{
+  background:linear-gradient(135deg,#fffaf2,#ead7b1);
+}
+
+.card{
+  max-width:700px;
+  width:100%;
+  background:#fffdf8;
+  border:8px solid #d5b46a;
+  box-shadow:0 15px 45px rgba(0,0,0,.18);
+  padding:60px 30px;
+}
+
+.decor{
+  font-size:32px;
+  color:#b58a3b;
+  letter-spacing:12px;
+  margin-bottom:25px;
 }
 
 .small{
-font-size:16px;
-letter-spacing:3px;
-color:#9b7040;
-margin-bottom:20px;
+  font-size:16px;
+  letter-spacing:3px;
+  color:#9b7040;
+  margin-bottom:20px;
 }
 
-h1{
-font-size:62px;
-font-weight:normal;
-color:#7c2635;
-line-height:1.1;
+h2{
+  font-weight:normal;
+}
+
+.hero h1{
+  font-size:62px;
+  font-weight:normal;
+  color:#7c2635;
+  line-height:1.1;
 }
 
 .and{
-font-size:30px;
-color:#b58a3b;
-margin:15px;
+  font-size:30px;
+  color:#b58a3b;
+  margin:15px;
 }
 
 .subtitle{
-font-size:19px;
-line-height:1.8;
-margin:30px 0;
+  font-size:19px;
+  line-height:1.8;
+  margin:30px 0;
 }
 
 .details{
-border-top:1px solid #d5b46a;
-border-bottom:1px solid #d5b46a;
-padding:25px;
-font-size:18px;
-line-height:2;
+  border-top:1px solid #d5b46a;
+  border-bottom:1px solid #d5b46a;
+  padding:25px;
+  font-size:18px;
+  line-height:2;
 }
 
 .button{
-display:inline-block;
-margin-top:30px;
-padding:13px 28px;
-background:#7c2635;
-color:white;
-text-decoration:none;
-border-radius:30px;
+  display:inline-block;
+  margin-top:30px;
+  padding:13px 28px;
+  background:#7c2635;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
 }
 
 .info{
-background:#f5eadb;
+  background:#f5eadb;
 }
 
 .info-box{
-max-width:650px;
-background:white;
-padding:50px 30px;
-box-shadow:0 10px 35px rgba(0,0,0,.12);
+  max-width:650px;
+  background:white;
+  padding:50px 30px;
+  box-shadow:0 10px 35px rgba(0,0,0,.12);
 }
 
 .info-box h2{
-font-size:38px;
-color:#7c2635;
-font-weight:normal;
-margin-bottom:30px;
+  font-size:38px;
+  color:#7c2635;
+  margin-bottom:30px;
 }
 
 .event{
-padding:20px;
-margin:15px 0;
-border:1px solid #d5b46a;
+  padding:25px;
+  margin:15px 0;
+  border:1px solid #d5b46a;
+  line-height:2;
 }
 
 .event h3{
-color:#7c2635;
-font-size:24px;
-margin-bottom:10px;
+  color:#7c2635;
+  font-size:24px;
+  margin-bottom:10px;
 }
 
 .footer{
-background:#7c2635;
-color:white;
-min-height:55vh;
+  background:#7c2635;
+  color:white;
+  min-height:55vh;
 }
 
 .footer h2{
-font-size:40px;
-font-weight:normal;
-margin-bottom:20px;
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 @media(max-width:600px){
-h1{font-size:45px}
-.card{padding:45px 20px}
-.bismillah{font-size:20px}
+  .hero h1{
+    font-size:45px;
+  }
+
+  .open-card h1{
+    font-size:38px;
+  }
+
+  .card{
+    padding:45px 20px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- OPEN INVITATION -->
+<div id="opening">
+  <div class="open-card">
+
+    <div class="ornament">✦ ✧ ✦</div>
+
+    <div class="bismillah">
+      بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+    </div>
+
+    <div class="invite">
+      YOU ARE INVITED
+    </div>
+
+    <h1>Tehreem</h1>
+
+    <div class="and">&</div>
+
+    <h1>Ahsan</h1>
+
+    <p class="open-text">
+      Together with their families,<br>
+      we invite you to celebrate<br>
+      their special day.
+    </p>
+
+    <button class="open-btn" onclick="openInvitation()">
+      Open Invitation
+    </button>
+
+  </div>
+</div>
+
+
+<!-- MAIN INVITATION -->
+<div id="main">
+
 <section class="hero">
-<div class="card">
+  <div class="card">
 
-<div class="decor">✦ ✧ ✦</div>
+    <div class="decor">✦ ✧ ✦</div>
 
-<div class="bismillah">
-بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
-</div>
+    <div class="small">
+      WEDDING INVITATION
+    </div>
 
-<div class="small">
-WEDDING INVITATION
-</div>
+    <h1>Tehreem</h1>
 
-<p class="subtitle">
-With the blessings of our families
-</p>
+    <div class="and">&</div>
 
-<h1>Tehreem</h1>
+    <h1>Ahsan</h1>
 
-<div class="and">&</div>
+    <p class="subtitle">
+      With the blessings of our families,<br>
+      we invite you to celebrate<br>
+      this beautiful occasion with us.
+    </p>
 
-<h1>Ahsan</h1>
+    <div class="details">
+      📅 <strong>6 January</strong><br>
+      🕔 <strong>5:00 PM</strong><br>
+      📍 <strong>Areesh Marriage Hall</strong>
+    </div>
 
-<p class="subtitle">
-Together with their families,<br>
-we invite you to celebrate<br>
-their beautiful beginning.
-</p>
+    <a href="#details" class="button">
+      View Details
+    </a>
 
-<div class="details">
-📅 <strong>6 January</strong><br>
-🕔 <strong>5:00 PM</strong><br>
-📍 <strong>Areesh Marriage Hall</strong>
-</div>
-
-<a href="#details" class="button">
-View Wedding Details
-</a>
-
-</div>
+  </div>
 </section>
 
 
 <section class="info" id="details">
-<div class="info-box">
 
-<h2>Our Wedding Day</h2>
+  <div class="info-box">
 
-<div class="event">
-<h3>Wedding Celebration</h3>
-<p>6 January</p>
-<p>5:00 PM</p>
-<p>Areesh Marriage Hall</p>
-</div>
+    <h2>Our Special Day</h2>
 
-<p class="subtitle">
-Your presence and blessings will make<br>
-our special day even more memorable.
-</p>
+    <div class="event">
+      <h3>Wedding Celebration</h3>
+      <p>📅 6 January</p>
+      <p>🕔 5:00 PM</p>
+      <p>📍 Areesh Marriage Hall</p>
+    </div>
 
-</div>
+    <p class="subtitle">
+      Your presence and blessings<br>
+      will make our celebration special.
+    </p>
+
+  </div>
+
 </section>
 
 
 <section class="footer">
-<div>
-<h2>Tehreem & Ahsan</h2>
 
-<p class="subtitle">
-We can't wait to celebrate<br>
-this beautiful day with you.
-</p>
+  <div>
+    <h2>Tehreem & Ahsan</h2>
 
-<p>With love ❤️</p>
-</div>
+    <p class="subtitle">
+      We look forward to celebrating<br>
+      this special occasion with you.
+    </p>
+
+    <p>With love ❤️</p>
+  </div>
+
 </section>
+
+</div>
+
+
+<script>
+function openInvitation(){
+
+  document.getElementById("opening").style.opacity="0";
+  document.getElementById("opening").style.visibility="hidden";
+
+  setTimeout(function(){
+    document.getElementById("opening").style.display="none";
+    document.getElementById("main").style.display="block";
+  },1000);
+
+}
+</script>
 
 </body>
 </html>
